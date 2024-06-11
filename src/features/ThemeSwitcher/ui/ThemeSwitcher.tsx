@@ -1,7 +1,5 @@
 import { FC } from "react";
-import styles from "./ThemeSwitcher.module.scss";
 import { useTheme } from "app/providers/ThemeProvider";
-import { classNames } from "shared/lib/classNames/classNames";
 import { Button, ButtonTheme } from "shared/ui/Button/Button";
 
 import DarkIcon from "shared/assets/theme-dark.svg";
