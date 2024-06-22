@@ -11,19 +11,18 @@ interface SidebarProps {
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsible, setCollapsible] = useState(false);
   const onToggle = () => setCollapsible((prev) => !prev);
-  console.log(
-    classNames(styles.Sidebar, { [styles.collapsed]: collapsible }, [className])
-  );
+
 
   return (
     <div
+      data-testid="sidebar"
       className={classNames(
         styles.Sidebar,
         { [styles.collapsed]: collapsible },
         [className]
       )}
     >
-      <button onClick={onToggle}>Toggle</button>
+      <button aria-label="sidebar-open-btn" onClick={onToggle}>Toggle</button>
       <div className={styles.switchers}>
         <ThemeSwitcher />
         <LanguageSwitcher />

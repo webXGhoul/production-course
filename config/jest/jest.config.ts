@@ -3,6 +3,8 @@
  * https://jestjs.io/docs/configuration
  */
 
+import path from "path";
+
 
 const config = {
   // All imported modules in your tests should be mocked automatically
@@ -17,7 +19,9 @@ const config = {
   // Automatically clear mock calls, instances, contexts and results before every test
   clearMocks: true,
   testEnvironment: "jsdom",
-
+  modulePaths: [
+    '<rootDir>src'
+  ],
   // An array of regexp pattern strings used to skip coverage collection
   coveragePathIgnorePatterns: [
     "\\\\node_modules\\\\"
@@ -25,7 +29,8 @@ const config = {
   moduleDirectories: [
     "node_modules"
   ],
-  
+
+
   // An array of file extensions your modules use
   moduleFileExtensions: [
     "js",
@@ -38,11 +43,11 @@ const config = {
     "node"
   ],
 
-    // The glob patterns Jest uses to detect test files
-    testMatch: [
-     '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
-    ],
-    rootDir: '../../',
+  // The glob patterns Jest uses to detect test files
+  testMatch: [
+    '<rootDir>src/**/*(*.)@(spec|test).[tj]s?(x)'
+  ],
+  rootDir: '../../',
 
 
   // Indicates whether the coverage information should be collected while executing the test
@@ -99,7 +104,6 @@ const config = {
 
 
   // A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
-  // moduleNameMapper: {},
 
   // An array of regexp pattern strings, matched against all module paths before considered 'visible' to the module loader
   // modulePathIgnorePatterns: [],
@@ -132,7 +136,7 @@ const config = {
   // restoreMocks: false,
 
   // The root directory that Jest should scan for tests and modules within
-  
+
 
   // A list of paths to directories that Jest should use to search for files in
   // roots: [
@@ -146,7 +150,7 @@ const config = {
   // setupFiles: [],
 
   // A list of paths to modules that run some code to configure or set up the testing framework before each test
-  // setupFilesAfterEnv: [],
+  setupFilesAfterEnv: ['<rootDir>config/jest/setupTests.ts'],
 
   // The number of seconds after which a test is considered as slow and reported as such in the results.
   // slowTestThreshold: 5,
@@ -155,7 +159,7 @@ const config = {
   // snapshotSerializers: [],
 
   // The test environment that will be used for testing
-  
+
 
   // Options that will be passed to the testEnvironment
   // testEnvironmentOptions: {},
@@ -179,8 +183,13 @@ const config = {
   // testRunner: "jest-circus/runner",
 
   // A map from regular expressions to paths to transformers
-  // transform: undefined,
 
+
+  moduleNameMapper: {
+    "@/(.*)": "<rootDir>src/$1",
+    '\\.(s?css)$': 'identity-obj-proxy',
+    '\\.svg$': path.resolve(__dirname, "jestEmptyComponent.tsx"),
+  },
   // An array of regexp pattern strings that are matched against all source file paths, matched files will skip transformation
   // transformIgnorePatterns: [
   //   "\\\\node_modules\\\\",
