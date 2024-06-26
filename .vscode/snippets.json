@@ -1,0 +1,25 @@
+{
+    "Storybook Template": {
+        "prefix": "storyc",
+        "body": [
+            "import type { Meta, StoryObj } from '@storybook/react';",
+            "import { ${TM_FILENAME_BASE/(.*).stories$/$1/} } from './${TM_FILENAME_BASE/(.*).stories$/$1/}';",
+            "",
+            "const meta: Meta<typeof ${TM_FILENAME_BASE/(.*).stories$/$1/}> = {",
+            "    component: ${TM_FILENAME_BASE/(.*).stories$/$1/},",
+            "    title: \"shared/${TM_FILENAME_BASE/(.*).stories$/$1/}\",",
+            "};",
+            "",
+            "export default meta;",
+            "type Story = StoryObj<typeof ${TM_FILENAME_BASE/(.*).stories$/$1/}>;",
+            "",
+            "export const Light: Story = {",
+            "",
+            "};",
+            "export const Dark: Story = {",
+            "",
+            "};"
+        ],
+        "description": "Storybook template for creating stories"
+    }
+}

@@ -21,11 +21,24 @@
 			"export const ${TM_FILENAME_BASE}: FC<${TM_FILENAME_BASE}Props> = ({ className }) => {",
 			"  return (",
 			"    <div className={classNames(styles.${TM_FILENAME_BASE}, {}, [className])}>",
-
 			"    </div>",
 			"  );",
 			"};"
 		],
 		"description": "Log output to console"
-	}
+	},
 }
+// import type { Meta, StoryObj
+// } from '@storybook/react';
+// import { Имя файла
+// } from './Имя файла';
+// const meta: Meta<typeof Sidebar> = {
+//     component: Имя файла,
+//     title: ""
+// };
+// export default meta;
+// type Story = StoryObj<typeof Имя файла>;
+// export const Light: Story = {
+// };
+// export const Dark: Story = {
+// };

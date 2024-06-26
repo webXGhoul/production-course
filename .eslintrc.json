@@ -1,5 +1,8 @@
 {
   "rules": {
     "no-unused-vars": "warn"
-  }
+  },
+  "extends": [
+    "plugin:storybook/recommended"
+  ]
 }
