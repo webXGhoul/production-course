@@ -30,3 +30,28 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
     </div>
   );
 };
+
+
+
+
+// названия блока _ название модификатора
+// названия блока__назвния элемента _ название модификатора
+(
+  <>
+    <div className="header__container"></div>
+    <header className="header">
+      <div className="header__container container">
+        <nav className="header__menu">
+          <a className="header__link header__link_active" href="">Main</a>
+          <a className="header__link" href="">Home</a>
+          <a className="header__link" href="">About</a>
+        </nav>
+      </div>
+    </header>
+    <section className="about">
+      <div className="about__container container">
+
+      </div>
+    </section>
+  </>
+)

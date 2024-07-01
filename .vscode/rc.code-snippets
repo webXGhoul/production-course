@@ -28,17 +28,6 @@
 		"description": "Log output to console"
 	},
 }
-// import type { Meta, StoryObj
-// } from '@storybook/react';
-// import { Имя файла
-// } from './Имя файла';
-// const meta: Meta<typeof Sidebar> = {
-//     component: Имя файла,
-//     title: ""
-// };
-// export default meta;
-// type Story = StoryObj<typeof Имя файла>;
-// export const Light: Story = {
-// };
-// export const Dark: Story = {
-// };
+
+// npm install --save-dev chromatic
+// npx chromatic --project-token=chpt_40bc6addd2ae43f

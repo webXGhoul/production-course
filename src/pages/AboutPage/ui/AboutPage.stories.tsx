@@ -11,6 +11,7 @@ const meta: Meta<typeof AboutPage> = {
     decorators: [
         (Story) => <Suspense fallback={<PageLoader />}><Story /></Suspense>
     ]
+    
 };
 
 export default meta;
