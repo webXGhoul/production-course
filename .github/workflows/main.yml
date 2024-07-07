@@ -23,6 +23,9 @@ jobs:
         run: npm install
       - name: build  prod project
         run: npm run build:prod
+      - name: lint ts,tsx
+        run: npm run lint:ts
+      - name: lint scss
+        run: npm run lint:scss
       - name: unit test
         run: npm run test
-      # - name: build storybook
