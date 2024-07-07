@@ -5,6 +5,7 @@
     ],
     "scss.validate": false,
     "css.validate": false,
+    "stylelint.validate": ["css", "scss"],
     "eslint.options": {
         "overrideConfigFile": ".eslintrc",
     },
