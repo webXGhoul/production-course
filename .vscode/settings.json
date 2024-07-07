@@ -3,8 +3,8 @@
         "public/locales",
         "src/shared/config/i18n"
     ],
-    "css.validate": false,
     "scss.validate": false,
+    "css.validate": false,
     "eslint.options": {
         "overrideConfigFile": ".eslintrc",
     },
