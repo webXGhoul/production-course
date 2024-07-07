@@ -22,7 +22,7 @@ export default ({ config }: { config: UpdateConfiguration }) => {
     config.module?.rules?.push(buildCssLoaders(true));
 
     const fileLoaderRule = (config.module?.rules?.find((rule) => rule?.test &&
-        // @ts-ignore
+        // @ts-expect-error
         rule?.test?.test('.svg')
     )) as RuleSetRule;
 
