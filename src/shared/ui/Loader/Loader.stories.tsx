@@ -13,12 +13,12 @@ type Story = StoryObj<typeof Loader>;
 
 export const Light: Story = {
 
-}
+};
 
 export const Dark: Story = {
     decorators: [
         (Story) => <>
             {ThemeDecorator(Theme.DARK)(Story)}</>
     ]
-}
+};
 
