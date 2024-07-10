@@ -19,11 +19,7 @@ export const LanguageSwitcher: FC<LanguageSwitcherProps> = ({ className, short }
       onClick={changeLng}
       className={classNames(styles.LanguageSwitcher, {}, [className])}
     >
-<<<<<<< main
-      {t("Язык")}
-=======
       {t(short ? "Короткий язык" :"Язык")}
->>>>>>> local
     </Button>
   );
 };
