@@ -10,5 +10,12 @@
         "overrideConfigFile": ".eslintrc",
     },
     "eslint.validate": 
-    [ "javascript", "javascriptreact", "html", "typescriptreact" ],
+    [
+        "javascript",
+        "javascriptreact",
+        "html",
+        "typescriptreact"
+    ],
+    "i18n-ally.keystyle": "nested",
+    "i18n-ally.sourceLanguage": "en",
 }

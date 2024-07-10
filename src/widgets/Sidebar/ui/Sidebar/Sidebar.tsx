@@ -3,6 +3,10 @@ import { ThemeSwitcher } from "features/ThemeSwitcher";
 import { FC, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import styles from "./Sidebar.module.scss";
+import { Button, ButtonSizes, ButtonTheme } from "shared/ui";
+import { AppLink, AppLinkTheme } from "shared/ui";
+import { useTranslation } from "react-i18next";
+import { RoutePath } from "shared/config/routeConfig/routeConfig";
 
 interface SidebarProps {
   className?: string;
@@ -11,6 +15,7 @@ interface SidebarProps {
 export const Sidebar: FC<SidebarProps> = ({ className }) => {
   const [collapsible, setCollapsible] = useState(false);
   const onToggle = () => setCollapsible((prev) => !prev);
+  const { t } = useTranslation();
 
 
   return (
@@ -22,36 +27,26 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
         [className]
       )}
     >
-      <button aria-label="sidebar-open-btn" onClick={onToggle}>Toggle</button>
+      <Button theme={ButtonTheme.BACKGROUND_INVERTED} size={ButtonSizes.XL} square className={styles.collapsible_btn} aria-label="sidebar-open-btn" onClick={onToggle}>{collapsible ? ">" : "<"}</Button>
+      <div>
+        <AppLink
+          className={styles["links__first-link"]}
+          theme={AppLinkTheme.SECONDARY}
+          to={RoutePath.main}
+        >
+          {t("Шапка.Главная")}
+        </AppLink>
+        <AppLink
+          theme={AppLinkTheme.SECONDARY}
+          to={RoutePath.about}
+        >
+          {t("Шапка.О сайте")}
+        </AppLink>
+      </div>
       <div className={styles.switchers}>
         <ThemeSwitcher />
-        <LanguageSwitcher />
+        <LanguageSwitcher short={collapsible} />
       </div>
     </div>
   );
 };
-
-
-
-
-// названия блока _ название модификатора
-// названия блока__назвния элемента _ название модификатора
-(
-  <>
-    <div className="header__container"></div>
-    <header className="header">
-      <div className="header__container container">
-        <nav className="header__menu">
-          <a className="header__link header__link_active" href="">Main</a>
-          <a className="header__link" href="">Home</a>
-          <a className="header__link" href="">About</a>
-        </nav>
-      </div>
-    </header>
-    <section className="about">
-      <div className="about__container container">
-
-      </div>
-    </section>
-  </>
-)

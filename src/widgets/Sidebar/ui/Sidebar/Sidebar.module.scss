@@ -6,10 +6,6 @@
   transition: 0.3s ease width;
 }
 
-.collapsed {
-  width: var(--sidebar-width-collapsible);
-}
-
 .switchers {
   display: flex;
   justify-content: center;
@@ -17,4 +13,22 @@
   bottom: 20px;
   width: 100%;
   gap: 15px;
+}
+
+.collapsed {
+  width: var(--sidebar-width-collapsible);
+
+  .switchers {
+    flex-direction: column;
+  }
+}
+
+.collapsible_btn {
+  position: absolute;
+  bottom: 40px;
+  right: -40px;
+}
+
+.links__first-link {
+  margin-right: 15px;
 }
