@@ -4,7 +4,7 @@ import { buildCssLoaders } from "./loaders/buildCssLoaders";
 import { buildSvgLoader } from "./loaders/buildSvgLoader";
 
 export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
-  const svgLoader = buildSvgLoader()
+  const svgLoader = buildSvgLoader();
 
   const babelLoader = {
     test: /\.(js|jsx|tsx|ts)$/,
@@ -15,7 +15,7 @@ export function buildLoaders({ isDev }: BuildOptions): webpack.RuleSetRule[] {
         presets: ['@babel/preset-env']
       }
     }
-  }
+  };
 
   const cssLoader = buildCssLoaders(isDev);
 

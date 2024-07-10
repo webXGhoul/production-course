@@ -8,4 +8,4 @@ export {
     StyleDecorator,
     RouterDecorator,
     I18nDecorator
-}
+};

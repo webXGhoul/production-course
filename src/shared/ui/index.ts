@@ -9,4 +9,4 @@ export {
     Loader,
     ButtonSizes,
     ButtonTheme
-}
+};

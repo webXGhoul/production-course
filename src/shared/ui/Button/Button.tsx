@@ -32,8 +32,8 @@ export const Button: FC<ButtonProps> = ({
 }) => {
   const mods: Record<string, boolean> = {
     [styles.square]: square,
-  }
-  const additional: string[] = [className, styles[theme], styles[size]]
+  };
+  const additional: string[] = [className, styles[theme], styles[size]];
   
   return (
     <button

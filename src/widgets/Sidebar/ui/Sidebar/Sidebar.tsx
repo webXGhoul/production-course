@@ -28,12 +28,13 @@ export const Sidebar: FC<SidebarProps> = ({ className }) => {
       )}
     >
       <Button theme={ButtonTheme.BACKGROUND_INVERTED} size={ButtonSizes.XL} square className={styles.collapsible_btn} aria-label="sidebar-open-btn" onClick={onToggle}>{collapsible ? ">" : "<"}</Button>
-      <div>
+      <div className={styles.links}>
         <AppLink
           className={styles["links__first-link"]}
           theme={AppLinkTheme.SECONDARY}
           to={RoutePath.main}
         >
+
           {t("Шапка.Главная")}
         </AppLink>
         <AppLink

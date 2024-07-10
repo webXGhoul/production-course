@@ -1,19 +1,20 @@
-import { render } from "@testing-library/react"
-import { ReactNode } from "react"
-import { I18nextProvider } from "react-i18next"
-import { MemoryRouter } from "react-router"
-import i18nForTests from 'shared/config/i18n/i18nForTests'
+import { ReactNode } from "react";
+import { render } from "@testing-library/react";
+import { I18nextProvider } from "react-i18next";
+import { MemoryRouter } from "react-router";
+import i18nForTests from 'shared/config/i18n/i18nForTests';
 
 interface renderComponentOptions {
-    route?: string
+    route?: string;
 }
 export const renderComponent = (children: ReactNode, options: renderComponentOptions = {}) => {
-    const { route } = options
+    const { route = "/" } = options;
 
     return render(
-        <I18nextProvider i18n={i18nForTests}>
-            <MemoryRouter initialEntries={[route]}>
+        <MemoryRouter initialEntries={[route]}>
+            <I18nextProvider i18n={i18nForTests}>
                 {children}
-            </MemoryRouter>
-        </I18nextProvider>)
-}
+            </I18nextProvider>
+        </MemoryRouter>
+    );
+};

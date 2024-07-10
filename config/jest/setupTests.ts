@@ -1,5 +1,5 @@
 import '@testing-library/jest-dom';
-import "regenerator-runtime"
+import "regenerator-runtime";
 declare global {
     var $RefreshReg$: () => void;
     var $RefreshSig$: () => () => void;

@@ -46,19 +46,19 @@ export const Background: Story = {
         ...Primary.args,
         theme: ButtonTheme.BACKGROUND
     }
-}
+};
 export const BackgroundInverted: Story = {
     args: {
         ...Primary.args,
         theme: ButtonTheme.BACKGROUND_INVERTED
     }
-}
+};
 export const Square: Story = {
     args: {
         children: "<",
         square: true
     }
-}
+};
 export const SquareSizeM: Story = {
     args: {
         children: "<",
@@ -66,7 +66,7 @@ export const SquareSizeM: Story = {
         size: ButtonSizes.M,
         theme: ButtonTheme.BACKGROUND_INVERTED
     }
-}
+};
 export const SquareSizeL: Story = {
     args: {
         children: "<",
@@ -74,7 +74,7 @@ export const SquareSizeL: Story = {
         size: ButtonSizes.L,
         theme: ButtonTheme.BACKGROUND_INVERTED
     }
-}
+};
 export const SquareSizeXL: Story = {
     args: {
         children: "<",
@@ -82,23 +82,23 @@ export const SquareSizeXL: Story = {
         size: ButtonSizes.XL,
         theme: ButtonTheme.BACKGROUND_INVERTED
     }
-}
+};
 
 export const SizeM: Story = {
     args: {
         ...Primary.args,
         size: ButtonSizes.M,
     }
-}
+};
 export const SizeL: Story = {
     args: {
         ...Primary.args,
         size: ButtonSizes.L,
     }
-}
+};
 export const SizeXL: Story = {
     args: {
         ...Primary.args,
         size: ButtonSizes.XL,
     }
-}
+};
