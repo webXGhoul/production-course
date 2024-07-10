@@ -5,11 +5,6 @@ import React, { Suspense } from "react";
 
 const preview: Preview = {
   decorators: [
-    (Story) => (
-      <>
-        {I18nDecorator(Story)}
-      </>
-    ),
     (Story) => <>{StyleDecorator(Story)}</>,
     (Story) => <>
       {ThemeDecorator(Theme.LIGHT)(Story)}
@@ -19,8 +14,12 @@ const preview: Preview = {
         {RouterDecorator(Story)}
       </>
     ),
-    (Story) => <Suspense fallback><Story /></Suspense>
-  ],
+    (Story) => (
+      <>
+        {I18nDecorator(Story)}
+      </>
+    )
+  ]
 };
 
 export default preview;

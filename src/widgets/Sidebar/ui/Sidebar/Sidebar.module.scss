@@ -15,11 +15,38 @@
   gap: 15px;
 }
 
+.links {
+  display: flex;
+  gap: 30px;
+  justify-content: center;
+  align-items: center;
+
+  &__link {
+    margin-top: 20px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+  }
+
+  &__icon {
+    fill: var(--inverted-primary-color);
+  }
+}
+
 .collapsed {
   width: var(--sidebar-width-collapsible);
 
   .switchers {
     flex-direction: column;
+  }
+
+  .links {
+    flex-direction: column;
+    gap: 10px;
+
+    &__text {
+      display: none;
+    }
   }
 }
 
@@ -27,12 +54,4 @@
   position: absolute;
   bottom: 40px;
   right: -40px;
-}
-
-.links__first-link {
-  margin-right: 15px;
-}
-
-.links {
-  margin-top: 10px;
 }
