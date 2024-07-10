@@ -12,6 +12,7 @@
     "build:prod": "webpack  --env mode=production",
     "build:dev": "webpack  --env mode=development",
     "test": "jest --config ./config/jest/jest.config.ts",
+    "chrom": "chromatic --project-token chpt_40bc6addd2ae43f --exit-zero-on-changes",
     "storybook": "storybook dev -p 6006 -c ./config/.storybook",
     "build-storybook": "storybook build -c ./config/.storybook"
   },
