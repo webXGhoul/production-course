@@ -2,12 +2,15 @@
     "root": true,
     "parser": "@typescript-eslint/parser",
     "plugins": [
-      "@typescript-eslint"
+      "@typescript-eslint",
+      "react-hooks"
     ],
     "rules": {
         "no-var": "off",
         "@typescript-eslint/ban-ts-comment": "off",
-        "semi": "warn"
+        "semi": "warn",
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "error"
     },
     "extends": [
       "eslint:recommended",

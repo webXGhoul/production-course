@@ -4,6 +4,7 @@
   "rules": {
     "selector-class-pattern": null,
     "no-missing-end-of-source-newline": null,
-    "number-leading-zero": null
+    "number-leading-zero": null,
+    "scss/at-extend-no-missing-placeholder": null
   }
 }

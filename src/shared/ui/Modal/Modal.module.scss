@@ -1,0 +1,45 @@
+.Modal {
+  position: fixed;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  z-index: var(--modal-z-index-close);
+  pointer-events: none;
+
+  &__content {
+    max-width: 700px;
+    padding: 20px;
+    background: var(--bg-color);
+    color: var(--primary-color);
+    border-radius: 25px;
+    scale: 0;
+    transition: .3s ease;
+  }
+
+  &__overlay {
+    width: 100%;
+    height: 100%;
+    background: rgba($color: #0000, $alpha: 60%);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  &_isOpen {
+    pointer-events: all;
+    z-index: var(--modal-z-index-open);
+
+    .Modal__content {
+      scale: 1;
+    }
+
+    .Modal__overlay {
+      backdrop-filter: blur(2px);
+    }
+  }
+
+  &_isClosing .Modal__content {
+    scale: 0;
+  }
+}

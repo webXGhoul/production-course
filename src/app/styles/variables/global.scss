@@ -14,4 +14,8 @@
   --navbar-height: 50px;
   --sidebar-width: 300px;
   --sidebar-width-collapsible: 80px;
+
+  // z-index
+  --modal-z-index-close: -1;
+  --modal-z-index-open: 10;
 }

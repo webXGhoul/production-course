@@ -26,6 +26,11 @@
 			"};"
 		],
 		"description": "aslkfasf"
+	},
+	"Create useState": {
+		"scope": "typescript, reacttypescript, typescriptreact",
+		"prefix": "sta",
+		"body": "const [$1, set$1] = useState($2)"
 	}
 }
 // npm install --save-dev chromatic
