@@ -3,20 +3,20 @@ import { Counter } from "./Counter";
 import { screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
 describe('Counter', () => {
-    test('increment counter', () => {
+    test('increment counter', async () => {
         const initialState = { counter: { value: 10 } };
         renderComponent(<Counter />, {initialState});
         const counterTitle = screen.getByTestId("counter-title");
-        expect(counterTitle).toContainHTML("10");
-        userEvent.click(screen.getByTestId("counter-increment"));
-        expect(counterTitle).toContainHTML("11");
+        expect(counterTitle).toHaveTextContent("10");
+        await userEvent.click(screen.getByTestId("counter-increment"));
+        expect(counterTitle).toHaveTextContent("11");
     });
-    test('decrement counter', () => {
-        const initialState = { counter: { value: 10 } };
-        renderComponent(<Counter />, {initialState});
+    test('decrement counter', async () => {
+        // const initialState = { counter: { value: 10 } };
+        renderComponent(<Counter />, {initialState: {counter: {value: 10}}});
         const counterTitle = screen.getByTestId("counter-title");
-        expect(counterTitle).toContainHTML("10");
-        userEvent.click(screen.getByTestId("counter-decrement"));
-        expect(counterTitle).toContainHTML("9");
+        expect(counterTitle).toHaveTextContent("10");
+        await userEvent.click(screen.getByTestId("counter-decrement"));
+        expect(counterTitle).toHaveTextContent("9");
     });
 });
