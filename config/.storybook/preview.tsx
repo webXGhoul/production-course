@@ -2,10 +2,11 @@ import type { Decorator, Preview } from "@storybook/react";
 import { Theme } from '../../src/app/providers/ThemeProvider/lib/ThemeContext'
 import { I18nDecorator, RouterDecorator, StyleDecorator, ThemeDecorator } from '../../src/shared/config/storybook'
 import React from "react";
-
-import type {GlobalTypes} from "../../node_modules/@storybook/types/dist/index"
+import { StoreProvider } from "../../src/app/providers/StoreProvider"
+import type { GlobalTypes } from "../../node_modules/@storybook/types/dist/index"
 
 const decorators: Decorator[] = [
+  (Story) => <StoreProvider><Story /></StoreProvider>,
   (Story) => <div id="root"><Story /></div>,
   (Story) => <>{StyleDecorator(Story)}</>,
   (Story) => <>
@@ -20,7 +21,8 @@ const decorators: Decorator[] = [
     <>
       {I18nDecorator(Story, context)}
     </>
-  )
+  ),
+
 ]
 
 const globalTypes: GlobalTypes = {
