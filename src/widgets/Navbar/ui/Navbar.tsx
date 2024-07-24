@@ -1,8 +1,9 @@
 import { FC, useCallback, useState } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import styles from "./Navbar.module.scss";
-import { Button, ButtonTheme, Modal } from "shared/ui";
+import { Button, ButtonTheme } from "shared/ui";
 import { useTranslation } from "react-i18next";
+import { LoginModal } from "features/AuthByUsername";
 
 interface NavbarProps {
   className?: string;
@@ -21,9 +22,7 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
     <div className={classNames(styles.navbar, {}, [className])}>
       <div className={styles.links}>
         <Button onClick={toggleIsAuthModal} theme={ButtonTheme.CLEAR_INVERTED}>{t("Войти")}</Button>
-        <Modal isOpen={isAuthModal} onClose={toggleIsAuthModal}>
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Minima, voluptate. Veritatis dolor sunt tempora impedit possimus repudiandae suscipit, quasi consequuntur incidunt culpa. Ad exercitationem fugit, officiis nihil sint dicta! Quisquam?
-        </Modal>
+        <LoginModal isOpen={isAuthModal} onClose={toggleIsAuthModal}/>
       </div>
     </div>
   );

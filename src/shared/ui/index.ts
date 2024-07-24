@@ -1,3 +1,4 @@
+import { Input } from './Input/Input';
 import { AppLink, AppLinkTheme } from "./AppLink/AppLink";
 import { Button, ButtonSizes, ButtonTheme } from "./Button/Button";
 import { Loader } from "./Loader/Loader";
@@ -10,6 +11,7 @@ export {
     Loader,
     Modal,
     Portal,
+    Input,
     AppLinkTheme,
     ButtonSizes,
     ButtonTheme,

@@ -1,0 +1,47 @@
+.Input {
+  display: flex;
+
+  &__placeholder {
+    margin-right: 5px;
+  }
+
+  &__wrapper {
+    flex-grow: 1;
+    position: relative;
+  }
+
+  &__content {
+    background: transparent;
+    caret-color: transparent;
+    color: var(--primary-color);
+
+    &::selection {
+      background: var(--primary-color);
+      color: var(--inverted-primary-color);
+    }
+  }
+
+  &__caret {
+    position: absolute;
+    width: 9px;
+    height: 3px;
+    left: 0;
+    bottom: 0;
+    background: var(--primary-color);
+    animation: blink 1.3s infinite;
+
+    @keyframes blink {
+      0% {
+        scale: 0;
+      }
+
+      50% {
+        scale: 1;
+      }
+
+      100% {
+        scale: 0;
+      }
+    }
+  }
+}
