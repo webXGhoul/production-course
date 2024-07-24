@@ -33,7 +33,8 @@
         ],
         "pathGroupsExcludedImportTypes": ["builtin", "external"]
       }
-    ],
+    ]
+  },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
