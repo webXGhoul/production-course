@@ -16,31 +16,24 @@
       "error",
       {
         "groups": [
-          ["builtin", "external", "internal"],
-          ["parent", "sibling", "index"],
-          ["style"]
+          ["builtin", "external", "internal", "parent", "sibling", "index"],
+          ["unknown", "object", "type"]
         ],
         "pathGroups": [
           {
-            "pattern": "*.css",
-            "group": "style",
+            "pattern": "**/*.scss",
+            "group": "unknown",
             "position": "after"
           },
           {
-            "pattern": "*.scss",
-            "group": "style",
-            "position": "after"
-          },
-          {
-            "pattern": "*.less",
-            "group": "style",
+            "pattern": "**/*.css",
+            "group": "unknown",
             "position": "after"
           }
         ],
         "pathGroupsExcludedImportTypes": ["builtin", "external"]
       }
-    ]
-  },
+    ],
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
