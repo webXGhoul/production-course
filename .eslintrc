@@ -4,7 +4,6 @@
   "plugins": [
     "@typescript-eslint",
     "react-hooks",
-    "import"
   ],
   "rules": {
     "no-var": "off",
@@ -12,28 +11,6 @@
     "semi": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
-    "import/order": [
-      "error",
-      {
-        "groups": [
-          ["builtin", "external", "internal", "parent", "sibling", "index"],
-          ["unknown", "object", "type"]
-        ],
-        "pathGroups": [
-          {
-            "pattern": "**/*.scss",
-            "group": "unknown",
-            "position": "after"
-          },
-          {
-            "pattern": "**/*.css",
-            "group": "unknown",
-            "position": "after"
-          }
-        ],
-        "pathGroupsExcludedImportTypes": ["builtin", "external"]
-      }
-    ]
   },
   "extends": [
     "eslint:recommended",
