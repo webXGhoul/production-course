@@ -1,20 +1,49 @@
 {
-    "root": true,
-    "parser": "@typescript-eslint/parser",
-    "plugins": [
-      "@typescript-eslint",
-      "react-hooks"
-    ],
-    "rules": {
-        "no-var": "off",
-        "@typescript-eslint/ban-ts-comment": "off",
-        "semi": "warn",
-        "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "error"
-    },
-    "extends": [
-      "eslint:recommended",
-      "plugin:@typescript-eslint/eslint-recommended",
-      "plugin:@typescript-eslint/recommended"
+  "root": true,
+  "parser": "@typescript-eslint/parser",
+  "plugins": [
+    "@typescript-eslint",
+    "react-hooks",
+    "import"
+  ],
+  "rules": {
+    "no-var": "off",
+    "@typescript-eslint/ban-ts-comment": "off",
+    "semi": "warn",
+    "react-hooks/rules-of-hooks": "error",
+    "react-hooks/exhaustive-deps": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["builtin", "external", "internal"],
+          ["parent", "sibling", "index"],
+          ["style"]
+        ],
+        "pathGroups": [
+          {
+            "pattern": "*.css",
+            "group": "style",
+            "position": "after"
+          },
+          {
+            "pattern": "*.scss",
+            "group": "style",
+            "position": "after"
+          },
+          {
+            "pattern": "*.less",
+            "group": "style",
+            "position": "after"
+          }
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin", "external"]
+      }
     ]
-  }
+  },
+  "extends": [
+    "eslint:recommended",
+    "plugin:@typescript-eslint/eslint-recommended",
+    "plugin:@typescript-eslint/recommended"
+  ]
+}
