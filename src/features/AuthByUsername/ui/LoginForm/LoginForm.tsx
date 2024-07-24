@@ -1,8 +1,8 @@
 import { FC } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
-import styles from "./LoginForm.module.scss";
 import { useTranslation } from "react-i18next";
 import { Button, Input } from "shared/ui";
+import styles from "./LoginForm.module.scss";
 
 interface LoginFormProps {
   className?: string;

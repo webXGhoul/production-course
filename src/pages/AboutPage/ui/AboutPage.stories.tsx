@@ -1,9 +1,9 @@
-import type { Meta, StoryObj } from '@storybook/react';
-import AboutPage from './AboutPage';
 import { ThemeDecorator } from 'shared/config/storybook';
 import { Theme } from 'app/providers/ThemeProvider/lib/ThemeContext';
 import { Suspense } from 'react';
 import { PageLoader } from 'widgets/PageLoader';
+import type { Meta, StoryObj } from '@storybook/react';
+import AboutPage from './AboutPage';
 
 const meta: Meta<typeof AboutPage> = {
     component: AboutPage,

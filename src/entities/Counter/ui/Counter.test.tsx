@@ -1,7 +1,7 @@
 import { renderComponent } from "shared/lib/tests/renderComponent/renderComponent";
-import { Counter } from "./Counter";
 import { screen } from "@testing-library/react";
 import { userEvent } from "@testing-library/user-event";
+import { Counter } from "./Counter";
 describe('Counter', () => {
     test('increment counter', async () => {
         const initialState = { counter: { value: 10 } };

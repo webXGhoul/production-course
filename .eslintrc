@@ -1,20 +1,39 @@
 {
   "root": true,
   "parser": "@typescript-eslint/parser",
-  "plugins": [
-    "@typescript-eslint",
-    "react-hooks",
-  ],
+  "plugins": ["@typescript-eslint", "react-hooks", "import"],
   "rules": {
     "no-var": "off",
     "@typescript-eslint/ban-ts-comment": "off",
     "semi": "warn",
     "react-hooks/rules-of-hooks": "error",
     "react-hooks/exhaustive-deps": "error",
+    "import/order": [
+      "error",
+      {
+        "groups": [
+          ["external", "internal", "builtin"],
+          ["parent", "sibling", "index", "type"],
+        ],
+        "pathGroups": [
+          {
+            "pattern": "**/*.scss",
+            "group": "index",
+            "position": "after",
+          },
+          {
+            "pattern": "**/*.css",
+            "group": "index",
+            "position": "after",
+          },
+        ],
+        "pathGroupsExcludedImportTypes": ["builtin", "external", "internal"],
+      },
+    ],
   },
   "extends": [
     "eslint:recommended",
     "plugin:@typescript-eslint/eslint-recommended",
-    "plugin:@typescript-eslint/recommended"
-  ]
+    "plugin:@typescript-eslint/recommended",
+  ],
 }

@@ -1,6 +1,6 @@
-import type { StoryFn } from "@storybook/react"
-import { ThemeProvider } from "app/providers/ThemeProvider"
-import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext"
+import { ThemeProvider } from "app/providers/ThemeProvider";
+import { Theme } from "app/providers/ThemeProvider/lib/ThemeContext";
+import type { StoryFn } from "@storybook/react";
 
 export const ThemeDecorator = (theme: Theme) => (Story: StoryFn) => {
     return (
@@ -9,5 +9,5 @@ export const ThemeDecorator = (theme: Theme) => (Story: StoryFn) => {
                 <Story />
             </div>
         </ThemeProvider>
-    )
-}
+    );
+};

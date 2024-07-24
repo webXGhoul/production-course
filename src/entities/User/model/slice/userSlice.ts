@@ -3,7 +3,7 @@ import { UserSchema } from "../types/userSchema";
 
 const initialState: UserSchema  = {
     
-}
+};
 
 export const userSlice = createSlice({
     name: "user",
