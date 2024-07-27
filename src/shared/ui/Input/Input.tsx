@@ -3,7 +3,6 @@ import {
   FC,
   InputHTMLAttributes,
   SyntheticEvent,
-  memo,
   useEffect,
   useRef,
   useState,
@@ -23,7 +22,7 @@ interface InputProps extends HTMLInputProps {
   autofocus?: boolean;
 }
 
-export const Input: FC<InputProps> = memo((props) => {
+export const Input: FC<InputProps> = (props) => {
   const {
     className,
     value,
@@ -95,4 +94,4 @@ export const Input: FC<InputProps> = memo((props) => {
       </div>
     </div>
   );
-});
+};

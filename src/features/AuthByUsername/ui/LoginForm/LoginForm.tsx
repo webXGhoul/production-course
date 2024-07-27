@@ -1,4 +1,4 @@
-import { FC, memo, useCallback } from "react";
+import { FC, useCallback } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import { useTranslation } from "react-i18next";
 import { Button, ButtonTheme, Input, Text, TextTheme } from "shared/ui";
@@ -12,7 +12,7 @@ interface LoginFormProps {
   className?: string;
 }
 
-export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
+export const LoginForm: FC<LoginFormProps> = ({ className }) => {
   const { t } = useTranslation("main");
   const dispatch = useDispatch();
   const { username, password, isLoading, error } = useSelector(getLoginState);
@@ -37,7 +37,7 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
 
   return (
     <div className={classNames(styles.LoginForm, {}, [className])}>
-      <Text title={t("Форма авторизации")}/>
+      <Text title={t("Форма авторизации")} />
       {error && <Text content={error} theme={TextTheme.ERROR} />}
       <Input
         autofocus
@@ -62,4 +62,4 @@ export const LoginForm: FC<LoginFormProps> = memo(({ className }) => {
       </Button>
     </div>
   );
-});
+};
