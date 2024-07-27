@@ -1,3 +1,8 @@
 {
-    "Главная": "Main"
+    "Главная": "Main",
+    "Форма авторизации": "Authorization form",
+    "Введите имя": "Enter name",
+    "Введите пароль": "Enter password",
+    "Войти": "Log in",
+    "Выйти": "Log out"
 }

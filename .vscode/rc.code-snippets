@@ -30,7 +30,12 @@
 	"Create useState": {
 		"scope": "typescript, reacttypescript, typescriptreact",
 		"prefix": "sta",
-		"body": "const [$1, set$1] = useState($2)"
+		"body": "const [$1, set$1] = useState($2);"
+	},
+	"Create useDipatch": {
+		"scope": "typescript, reacttypescript, typescriptreact",
+		"prefix": "dispatch",
+		"body": "const dispatch = useDispatch();"
 	}
 }
 // npm install --save-dev chromatic

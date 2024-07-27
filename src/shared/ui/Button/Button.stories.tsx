@@ -106,3 +106,10 @@ export const SizeXL: Story = {
         size: ButtonSizes.XL,
     }
 };
+export const Disable: Story = {
+    args: {
+        ...Primary.args,
+        disabled: true,
+        theme: ButtonTheme.OUTLINE
+    }
+};
