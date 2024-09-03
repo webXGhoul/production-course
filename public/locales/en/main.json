@@ -4,5 +4,6 @@
     "Введите имя": "Enter name",
     "Введите пароль": "Enter password",
     "Войти": "Log in",
-    "Выйти": "Log out"
+    "Выйти": "Log out",
+    "Пользователь не найден": "User not found"
 }

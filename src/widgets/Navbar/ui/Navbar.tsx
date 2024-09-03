@@ -26,10 +26,11 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
   const userData = useSelector(getUserAuthData);
 
   const onLogOut = useCallback(() => {
+    setIsAuthModal(false);
     dispatch(userActions.logOut());
   }, [dispatch]);
 
-  if (userData.id.length || userData.username.length) {
+  if (userData) {
     return (
       <div className={classNames(styles.navbar, {}, [className])}>
         <div className={styles.links}>
