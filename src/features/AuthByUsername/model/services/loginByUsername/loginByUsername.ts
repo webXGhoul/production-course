@@ -2,6 +2,7 @@ import { createAsyncThunk } from "@reduxjs/toolkit";
 import { User, userActions } from "entities/User";
 import { USER_LOCAL_STORAGE_KEY } from "shared/consts";
 import axios from "axios";
+import i18n from "shared/config/i18n/i18n";
 
 interface LoginByUsernameProps {
   username: string;
@@ -27,6 +28,6 @@ export const loginByUsername = createAsyncThunk<
     return data;
   } catch (error) {
     const errMsg: string = error?.response?.data?.message;
-    return thunkApi.rejectWithValue(errMsg);
+    return thunkApi.rejectWithValue(i18n.t(errMsg));
   }
 });

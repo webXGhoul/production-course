@@ -15,7 +15,7 @@
     "chrom": "chromatic --project-token chpt_40bc6addd2ae43f --exit-zero-on-changes",
     "storybook": "storybook dev -p 6006 -c ./config/.storybook",
     "build-storybook": "storybook build -c ./config/.storybook",
-    "server": "npx json-server ./json-server/db.json -p 8000"
+    "server": "node ./json-server"
   },
   "keywords": [],
   "author": "",

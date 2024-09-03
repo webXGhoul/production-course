@@ -1,4 +1,4 @@
-import { FC } from "react";
+import { FC, ReactNode } from "react";
 import { classNames } from "shared/lib/classNames/classNames";
 import styles from "./Text.module.scss";
 
@@ -12,18 +12,14 @@ interface TextProps {
   title?: string;
   content?: string;
   theme?: TextTheme;
+  children?: ReactNode;
 }
 
 export const Text: FC<TextProps> = (props) => {
-    const {
-        title, 
-        content,
-        className,
-        theme = TextTheme.PRIMARY,
-    } = props;
+  const { title, content, className, theme = TextTheme.PRIMARY, children} = props;
   return (
     <div className={classNames(styles.Text, {}, [className, styles[theme]])}>
-      {title && <p className={styles.Text__title}>{title}</p>}
+      {title && <p className={styles.Text__title}>{title}</p> || <p className={styles.Text__title}>{children}</p>}
       {content && <p className={styles.Text__content}>{content}</p>}
     </div>
   );

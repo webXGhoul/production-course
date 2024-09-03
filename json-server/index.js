@@ -33,7 +33,7 @@ server.post('/login', (req, res) => {
             return res.json(userFromBd);
         }
 
-        return res.status(403).json({ message: 'User not found' });
+        return res.status(403).json({ message: 'Пользователь не найден' });
     } catch (e) {
         console.log(e);
         return res.status(500).json({ message: e.message });
@@ -52,7 +52,11 @@ server.use((req, res, next) => {
 
 server.use(router);
 
+const PORT = 8000
+
 // запуск сервера
-server.listen(8000, () => {
-    console.log('server is running on 8000 port');
+server.listen(PORT, () => {
+    console.log(`server is running on ${PORT} port`);
+    console.log('routes:');
+    console.log(`https://localhost:${PORT}/login`);
 });

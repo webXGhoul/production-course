@@ -29,11 +29,13 @@ export const Navbar: FC<NavbarProps> = ({ className }) => {
     dispatch(userActions.logOut());
   }, [dispatch]);
 
-  if (userData) {
+  if (userData.id.length || userData.username.length) {
     return (
       <div className={classNames(styles.navbar, {}, [className])}>
         <div className={styles.links}>
-          {userData && userData.username}
+          {userData && (
+            <span style={{ marginRight: 10 }}>{userData.username}</span>
+          )}
           <Button onClick={onLogOut} theme={ButtonTheme.CLEAR_INVERTED}>
             {t("Выйти")}
           </Button>
